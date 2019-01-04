@@ -100,7 +100,6 @@ var (
 							for _, r := range row {
 								sarow = append(sarow, md.NewPlainTextCell(fmt.Sprint(r)))
 							}
-							log.Infof("i: %v", i)
 							if i == 0 {
 								table.Headers = sarow
 							} else {
