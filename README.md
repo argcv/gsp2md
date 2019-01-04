@@ -1,2 +1,4 @@
 # gsp2md
-Google Spreadsheet to markdown table
+
+A simple converter from Google Spreadsheet to Markdown Table
+

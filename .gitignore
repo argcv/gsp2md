@@ -10,3 +10,9 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+/gsp2md
+/gsp2md.yaml
+/credentials.json
+/token.json
+/.idea

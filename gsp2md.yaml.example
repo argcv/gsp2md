@@ -1,0 +1,13 @@
+# You may copy this example, and name it as "gsp2md", and save to somewhere
+
+gs:
+  # Please see https://developers.google.com/sheets/api/quickstart/go
+  # to get your client id and secret
+  client-id: 123456789012-abcdefghijklmnopqrstuvwxyz1234567.apps.googleusercontent.com
+  client-secret: abcdefghijklmnopqrstuvwx
+
+
+in:
+  - url: https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+    ranges:
+      - "Class Data!A2:E"
