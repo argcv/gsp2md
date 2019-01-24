@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/argcv/gsp2md/pkg/assets"
+	"github.com/argcv/gsp2md/configs"
 	"github.com/argcv/gsp2md/pkg/gs"
 	"github.com/argcv/gsp2md/pkg/md"
 	"github.com/argcv/gsp2md/pkg/utils"
@@ -34,7 +34,7 @@ var (
 
 			// init config
 			conf, _ := cmd.Flags().GetString("config")
-			if e := assets.LoadConfig(conf); e != nil {
+			if e := configs.LoadConfig(conf); e != nil {
 				return e
 			}
 
@@ -44,7 +44,7 @@ var (
 			return nil
 		},
 		RunE: func(cmd *cobra.Command, args []string) error {
-			cfg, err := assets.LoadGsp2MdConfig()
+			cfg, err := configs.LoadGsp2MdConfig()
 			if err != nil {
 				return err
 			}

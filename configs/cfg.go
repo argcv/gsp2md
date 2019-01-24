@@ -1,4 +1,4 @@
-package assets
+package configs
 
 import (
 	"fmt"
@@ -37,7 +37,6 @@ func LoadConfig(path string) (err error) {
 			ConfigFallbackSearchPath: fmt.Sprintf("$GOPATH/src/github.com/argcv/%s/", ProjectName),
 		})
 	}
-
 
 	err = config.LoadConfig(options...)
 	GlobalConfig.Error = err

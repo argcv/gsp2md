@@ -45,7 +45,7 @@ func (t *Table) generateAlignmentLabel(length int) string {
 	}
 	length -= 2
 	base := ":-"
-	for i := 0; i < length; i ++ {
+	for i := 0; i < length; i++ {
 		base += "-"
 	}
 	return base
@@ -57,7 +57,7 @@ func (t *Table) righpad(s string, length int) string {
 		return s
 	}
 	length -= ls
-	for i := 0; i < length; i ++ {
+	for i := 0; i < length; i++ {
 		s += " "
 	}
 	return s
@@ -73,7 +73,7 @@ func (t *Table) String() string {
 
 	colPadSizes := []int{}
 
-	for i := 0; i < maxSize; i ++ {
+	for i := 0; i < maxSize; i++ {
 		colPadSizes = append(colPadSizes, 1)
 	}
 
@@ -102,7 +102,7 @@ func (t *Table) String() string {
 
 	sheaders := []string{}
 	alignments := []string{}
-	for i := 0; i < maxSize; i ++ {
+	for i := 0; i < maxSize; i++ {
 		cHeader := getHeader(i)
 		alignment := t.generateAlignmentLabel(colPadSizes[i])
 		sheaders = append(sheaders, t.righpad(cHeader, colPadSizes[i]))
@@ -117,7 +117,7 @@ func (t *Table) String() string {
 			srdata = append(srdata, t.righpad(c.String(), colPadSizes[i]))
 		}
 		// append empty cells
-		for i := len(r.Columns); i < maxSize; i ++ {
+		for i := len(r.Columns); i < maxSize; i++ {
 			srdata = append(srdata, t.righpad("", colPadSizes[i]))
 		}
 		sdata = append(sdata, "|"+strings.Join(srdata, "|")+"|")

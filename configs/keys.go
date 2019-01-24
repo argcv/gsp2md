@@ -1,6 +1,5 @@
-package assets
+package configs
 
 const (
 // Any kaymap here?
 )
-

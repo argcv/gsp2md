@@ -7,6 +7,13 @@ pushd $(dirname $(dirname $0)) > /dev/null # GO TO PROJECT ROOT
 
 echo "Working dir: $(pwd -P)"
 
-find . -name '*.go' | xargs -n 1 -I{} -P 6 sh -c 'echo "reformat: {}" && gofmt -w {}'
+SRC_DIRS=('configs' 'pkg')
+
+for SRC_DIR in ${SRC_DIRS[@]}; do
+    echo "Processing folder: ${SRC_DIR}"
+    find ${SRC_DIR} -name '*.go' | xargs -n 1 -I{} -P 6 sh -c 'echo "reformat: {}" && gofmt -w {}'
+done
+
+
 
 popd > /dev/null # EXIT FROM PROJECT ROOT
